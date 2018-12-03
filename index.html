@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charts</title>
+    <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="includes/js/excanvas.js"></script><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="includes/css/jquery.jqplot.css">
+    <link rel="stylesheet" href="includes/css/style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Markets</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Market1</a></li>
+                    <li><a href="#">Market2</a></li>
+                    <li><a href="#">Market3</a></li>
+                    <li><a href="#">Market4</a></li>
+                    <li><a href="#">Market5</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!--
+<div id="chartDiv" class="chart-container"></div>
+<ul class="chart-controls">
+    <li class="chart-control-button"><button type="button" id="90m">90m</button></li>
+    <li class="chart-control-button"><button type="button" id="6h">6h</button></li>
+    <li class="chart-control-button"><button type="button" id="1d">1d</button></li>
+</ul> -->
+    <section class="container chart">
+        <h1 class="text-center">Bitmarket.pl</h1>
+        <div id="chart3" class="chart-container">
+        </div>
+        <div class="col-sm-12 controls">
+            <div class="chart-modes text-center col-md-4">
+                <button class="chart-mode" id="ohlc">CandleStick Chart</button>
+                <button class="chart-mode active disabled" id="line">Line Chart</button>
+            </div>
+            <div class="chart-date-controls text-center col-md-8">
+                <button class="control-buttons active" id="90m">90m</button>
+                <button class="control-buttons" id="6h">6h</button>
+                <button class="control-buttons" id="1d">1d</button>
+                <button class="control-buttons" id="7d">7d</button>
+                <button class="control-buttons" id="1m">1m</button>
+                <button class="control-buttons" id="3m">3m</button>
+                <button class="control-buttons" id="6m">6m</button>
+                <button class="control-buttons" id="1y">1y</button>
+            </div>
+        </div>
+        <div class="ticker col-md-12 tables">
+            <table class="table table-bordered">
+                <tr class="table-heading">
+                    <th class="col-md-2">ask</th>
+                    <th class="col-md-2">bid</th>
+                    <th class="col-md-2">last</th>
+                    <th class="col-md-2">low</th>
+                    <th class="col-md-2">high</th>
+                    <th class="col-md-2">volume</th>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section class="container tables">
+        <div class="col-md-4">
+            <h3 class="text-center">Bids</h3>
+            <table class="table table-bordered" id="askTable">
+                <tr class="ask-heading">
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Total</th>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h3 class="text-center">Asks</h3>
+            <table class="table table-bordered" id="bidTable">
+                <tr class="bid-heading">
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Total</th>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h3 class="text-center">Trades</h3>
+            <table class="table table-bordered" id="tradeTable">
+                <tr class="trade-heading">
+                    <th>Date</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+<script src="includes/js/jquery-1.12.3.min.js"></script>
+<script src="includes/js/jquery-dateFormat.js"></script>
+<script src="includes/js/autobahn.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="includes/js/jquery.jqplot.js"></script>
+<script src="includes/js/plugins/jqplot.barRenderer.js"></script>
+<script src="includes/js/plugins/jqplot.logAxisRenderer.js"></script>
+<script src="includes/js/plugins/jqplot.dateAxisRenderer.js"></script>
+<script src="includes/js/plugins/jqplot.canvasTextRenderer.js"></script>
+<script src="includes/js/plugins/jqplot.canvasAxisTickRenderer.js"></script>
+<script src="includes/js/plugins/jqplot.canvasAxisLabelRenderer.js"></script>
+<script src="includes/js/plugins/jqplot.categoryAxisRenderer.js"></script>
+<script src="includes/js/plugins/jqplot.ohlcRenderer.js"></script>
+<script src="includes/js/plugins/jqplot.cursor.js"></script>
+<script src="includes/js/plugins/jqplot.highlighter.js"></script>
+<script src="includes/js/plugins/jqplot.json2.js"></script> 
+<script src="includes/js/main.js"></script><!--  main.js  logicaljs.js -->
+</body>
+</html>
